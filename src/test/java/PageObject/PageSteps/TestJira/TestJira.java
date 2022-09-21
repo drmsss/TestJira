@@ -1,8 +1,6 @@
 package PageObject.PageSteps.TestJira;
 
 import Hooks.WebHooks;
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -56,7 +54,7 @@ public class TestJira extends WebHooks {
         openUrl(getConfigurationValue("jiraUrl"));
         login(getConfigurationValue("login"));
         openTestProject();
-        //Assertions.assertEquals("Test", projectNameValue.text());
+        Assertions.assertEquals("Test", projectNameValue.text());
         openAllTasks();
         clickCreateButton();
         createTask("Ошибка","Test bug", "Test bug description");
