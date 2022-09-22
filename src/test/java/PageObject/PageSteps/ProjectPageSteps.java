@@ -1,5 +1,6 @@
 package PageObject.PageSteps;
 
+import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
 
 import static PageObject.PageElements.ProjectPageElem.*;
@@ -33,11 +34,11 @@ public class ProjectPageSteps {
 
     @Step("Нажимаем кнопку Создать")
     public static void clickCreateButton() {
-        createTaskButton.click();
+        createTaskButton.shouldBe(Condition.enabled).click();
     }
 
     @Step("Открываем только что созданную задачу")
     public static void goToCreatedTask() {
-        taskCreationLabel.click();
+        taskCreationLabel.shouldBe(Condition.visible).click();
     }
 }

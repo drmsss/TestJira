@@ -1,5 +1,6 @@
 package PageObject.PageSteps;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Step;
 
@@ -16,9 +17,9 @@ public class AuthorizationPageSteps {
 
     @Step("Авторизуемся как пользователь {login}")
     public static void login (String login){
-        loginField.sendKeys(getConfigurationValue("login"));
-        passwordField.sendKeys(getConfigurationValue("password"));
-        loginButton.click();
+        loginField.shouldBe(Condition.visible).sendKeys(getConfigurationValue("login"));
+        passwordField.shouldBe(Condition.visible).sendKeys(getConfigurationValue("password"));
+        loginButton.shouldBe(Condition.enabled).click();
     }
 
 }

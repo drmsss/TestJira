@@ -1,5 +1,6 @@
 package PageObject.PageSteps;
 
+import PageObject.PageElements.CreateTaskPage;
 import io.qameta.allure.Step;
 
 import static PageObject.PageElements.CreateTaskPage.*;
@@ -13,6 +14,7 @@ public class CreateTaskSteps {
         summaryField.setValue(summary);
         textButton.click();
         descriptionField.sendKeys(description);
+        assignMeButton.click();
         createButton.click();
     }
 

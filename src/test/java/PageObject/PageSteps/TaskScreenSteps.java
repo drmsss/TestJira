@@ -8,12 +8,13 @@ import static PageObject.PageElements.TaskScreenElem.*;
 public class TaskScreenSteps {
     @Step("Переводим задачу в статус В работе")
     public static void setStatusInProgress() {
-        inProgressButton.click();
+        inProgressButton.shouldBe(Condition.enabled).click();
+        closePopupButton.shouldBe(Condition.visible).click();
     }
     @Step("Переводим задачу в статус Выполнено")
     public static void setStatusDone() {
-        businessProcessButton.click();
-        doneButton.click();
-    }
+        businessProcessButton.shouldBe(Condition.enabled).click();
+        doneButton.shouldBe(Condition.visible).shouldBe(Condition.enabled).click();
+}
 
 }

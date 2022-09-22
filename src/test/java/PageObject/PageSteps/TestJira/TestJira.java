@@ -12,6 +12,7 @@ import static PageObject.PageSteps.CreateTaskSteps.*;
 import static PageObject.PageSteps.MainPageSteps.*;
 import static PageObject.PageSteps.ProjectPageSteps.*;
 import static PageObject.PageSteps.TaskScreenSteps.*;
+import static com.codeborne.selenide.Selenide.sleep;
 import static utils.Configuration.*;
 
 public class TestJira extends WebHooks {

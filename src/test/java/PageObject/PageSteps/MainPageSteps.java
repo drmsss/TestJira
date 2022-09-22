@@ -1,5 +1,6 @@
 package PageObject.PageSteps;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Step;
 
@@ -10,6 +11,6 @@ public class MainPageSteps {
     @Step("Переходим в проект TEST")
     public static void openTestProject(){
         projectsButton.click();
-        testProjectLink.click();
+        testProjectLink.shouldBe(Condition.visible).click();
     }
 }

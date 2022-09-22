@@ -10,5 +10,7 @@ public class CreateTaskPage {
     public static SelenideElement summaryField = $x("//input[@id='summary']");
     public static SelenideElement textButton = $x("//button[text()='Текст']");
     public static SelenideElement descriptionField = $x("//textarea[@id='description']");
+    public static SelenideElement assignMeButton = $x("//button[text()='Назначить меня']");
     public static SelenideElement createButton = $x("//input[@value='Создать']");
+
 }
